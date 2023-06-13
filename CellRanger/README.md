@@ -1,9 +1,9 @@
-# CellRanger arc (v. 2.0.0) 
+# CellRanger ARC (v. 2.0.0) 
 
-## Mouse pre- and post-transplant ILC2s
+### Example of cellranger arc run on pre-transplant ILC2s (mouse)
 
 
-```python
+```bash
 source /nas/longleaf/home/jfoster3/.bashrc; 
 
 module load cellranger-arc/2.0.0;
