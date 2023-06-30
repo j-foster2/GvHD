@@ -21,22 +21,17 @@ library(BSgenome.Mmusculus.UCSC.mm10)
 library(circlize)
 library(ComplexHeatmap)
 
-# Data for script testing
-out.dir <- "/proj/dllab/jfoster/serody_project/results/Fig2_mILC2_mILC2-GFP_scMultiome_analysis_RNA_Integration/"
 
+setwd("/proj/dllab/jfoster/serody_project/GitHub/GvHD/")
 
 # Output Directory -------------------------------------------------------------
 
-out.dir <- "./Figure2/"
-out.dir <- "/proj/dllab/jfoster/serody_project/GitHub/Figure2/"
-
-
+out.dir <- "./Figure_2/"
 
 
 # Read Integrated Seurat Object ------------------------------------------------
 
-ilc.integrated <- readRDS(paste0(out.dir,
-                                 "ILC2_GFP_rna_integrated_",exp.rep[i],"_v4.3", ".rds"))
+ilc.integrated <- readRDS(paste0(out.dir,"pre-transplant_post-transplant_integration_replicate1.rds"))
 
 
 # Calculate Average ILC1/2/3 LDG signal on integration -------------------------
@@ -103,6 +98,9 @@ for (j in 1:length(innate.lymphoid.genes)) {
 
 
 # FIG. 2b - UMAP annotated with sample ID -------------------------------------
+
+# Set order of samples
+ilc.integrated$orig.ident <- factor(ilc.integrated$orig.ident, levels = c("pre_transplant","post_transplant"))
 
 ilc.integrated.umap <- DimPlot(ilc.integrated,
                                reduction = "umap",
