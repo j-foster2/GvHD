@@ -4,7 +4,7 @@
 
 (Code needs to be exected as described below for all directories to appear)
 
-- `processed_data`: raw and processed ata 
+- `processed_data`: run through data-appropriate pipeline (i.e. CellRanger)
 - `CellRanger`: example code of hour cellranger was run on single nucleus multiome and scATAC datasets  
 - `sessionInfo`: sessionInfo for each of the R scripts
 - `Figure_1`: output from scripts for figure 1
