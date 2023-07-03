@@ -4,30 +4,29 @@
 
 # Memory Requirement: 
 
-library(JASPAR2020)
-library(TFBSTools)
 library(Seurat)
-library(EnsDb.Mmusculus.v79)
-library(GenomicAlignments)
 library(Signac)
-library(patchwork)
-library(tidyr)
-library(dplyr)
-library(stringr)
-library(ggplot2)
-library(ggrepel)
-library(gprofiler2)
-library(forcats)
-library(clustree)
-library(gplots)
-library(UpSetR)
 library(chromVAR)
 library(motifmatchr)
+library(JASPAR2020)
+library(TFBSTools)
+library(ggplot2)
+library(gplots)
+library(ggrepel)
+library(tidyr)
+library(dplyr)
+library(patchwork)
+library(stringr)
+library(EnsDb.Mmusculus.v79)
 library(BSgenome.Mmusculus.UCSC.mm10)
-library(circlize)
-library(ComplexHeatmap)
+library(GenomicAlignments)
+library(gprofiler2)
+#library(forcats)
+library(clustree)
+#library(circlize)
 
-# setwd("/proj/dllab/jfoster/serody_project/GitHub/GvHD/")
+
+setwd("/proj/dllab/jfoster/serody_project/GitHub/GvHD/")
 
 # Output Directory -------------------------------------------------------------
 
@@ -208,9 +207,6 @@ ilc.clusttree <- clustree(ilc.integrated,
 ilc.integrated@misc <- append(ilc.integrated@misc, list(ilc.clusttree))
 
 names(ilc.integrated@misc) <- c("clusterOptimizationPlot")
-
-#View plot
-ilc.integrated@misc$clusterOptimizationPlot
 
 
 # Drop two cells that cluster on their own at multiple resolution values -------

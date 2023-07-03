@@ -11,3 +11,20 @@
 - `Figure_2`: output from scripts for figure 2
 - `Figure_3`: output from scripts for figure 3
 - `Figure_4`: output from scripts for figure 4
+
+
+## Data
+
+Create a folder called `processed_data`, and download the processed files from GEO SuperSeries `GSE232003`.
+
+## Figure 1 workflow
+
+## Figure 2 workflow
+
+- [integrate_multiome_replicate1.R](integrate_multiome_replicate1.R) - integrate first replicate of mouse  single-nucleus multiome data
+- [integrate_multiome_replicate2.R](integrate_multiome_replicate2.R) - integrate second replicate of mouse  single-nucleus multiome data
+
+
+## Figure 3 workflow
+
+## Figure 4 workflow
