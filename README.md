@@ -4,7 +4,7 @@
 
 (Code needs to be exected as described below for all directories to appear)
 
-- `data`: raw and processed ata 
+- `processed_data`: raw and processed ata 
 - `CellRanger`: example code of hour cellranger was run on single nucleus multiome and scATAC datasets  
 - `sessionInfo`: sessionInfo for each of the R scripts
 - `Figure_1`: output from scripts for figure 1
@@ -21,9 +21,10 @@ Create a folder called `processed_data`, and download the processed files from G
 
 ## Figure 2 workflow
 
-- [integrate_multiome_replicate1.R](integrate_multiome_replicate1.R) - integrate first replicate of mouse  single-nucleus multiome data
-- [integrate_multiome_replicate2.R](integrate_multiome_replicate2.R) - integrate second replicate of mouse  single-nucleus multiome data
-
+- [integrate_multiome_replicate1.R](integrate_multiome_replicate1.R) - integrate first replicate of mouse single-nucleus multiome data
+- [integrate_multiome_replicate2.R](integrate_multiome_replicate2.R) - integrate second replicate of mouse single-nucleus multiome data
+- [Figure_2b.R](Figure_2b.R) - generate figure 2b plot 
+- [Figure_2c.R](Figure_2c.R) - generate figure 2c plot
 
 ## Figure 3 workflow
 

@@ -51,9 +51,9 @@ genome(annotations) <- "mm10"
 # Load Multiome data - HDF5 format ---------------------------------------------
 
 #Load Pre-transplant and post-transplant data 
-pre_transplant.data <- Read10X_h5("./data/ilc2_pre-transplant_rep2_filtered_feature_bc_matrix.h5")
+pre_transplant.data <- Read10X_h5("./processed_data/ilc2_pre-transplant_rep2_filtered_feature_bc_matrix.h5")
 
-post_transplant.data <- Read10X_h5("./data/ILC2_post-transplant_rep2_filtered_feature_bc_matrix.h5")
+post_transplant.data <- Read10X_h5("./processed_data/ILC2_post-transplant_rep2_filtered_feature_bc_matrix.h5")
 
 
 # Read Pre-transplant ILC2 data - (including peak identification) --------------
@@ -74,7 +74,7 @@ grange.use <- seqnames(grange.counts) %in% standardChromosomes(grange.counts)
 pre_transplant.atac_counts <- pre_transplant.atac_counts[as.vector(grange.use), ]
 
 # Store snATAC Fragment file
-pre_transplant_frag.file <- "./data/ilc2_pre-transplant_rep2_atac_fragments.tsv.gz"
+pre_transplant_frag.file <- "./processed_data/ilc2_pre-transplant_rep2_atac_fragments.tsv.gz"
 
 chrom_assay <- CreateChromatinAssay(
   counts = pre_transplant.atac_counts,
@@ -107,7 +107,7 @@ grange.use <- seqnames(grange.counts) %in% standardChromosomes(grange.counts)
 post_transplant.atac_counts <- post_transplant.atac_counts[as.vector(grange.use), ]
 
 
-post_transplant.frag.file <- "./data/ILC2_post-transplant_rep2_atac_fragments.tsv.gz"
+post_transplant.frag.file <- "./processed_data/ILC2_post-transplant_rep2_atac_fragments.tsv.gz"
 
 chrom_assay <- CreateChromatinAssay(
   counts = post_transplant.atac_counts,
