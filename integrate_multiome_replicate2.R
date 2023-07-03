@@ -270,7 +270,7 @@ ilc.integrated <- RunChromVAR(
 # Save Integration Seurat Object -----------------------------------------------
 
 saveRDS(ilc.integrated,
-        file = paste0(out.dir, "pre-transplant_post-transplant_integration_replicate1.rds"))
+        file = paste0(out.dir, "pre-transplant_post-transplant_integration_replicate2.rds"))
 
 
 # Save Session Info ------------------------------------------------------------
