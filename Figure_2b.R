@@ -1,28 +1,12 @@
-#library(JASPAR2020)
-#library(TFBSTools)
+# Creates the plot shown in figure 2b. The UMAP reflects the dimension
+# reduction performed on the integrated data.This script also calculates the
+# percentage of pre-transplant cells that cluster with the post-transplant cells
+# and vice versa. 
+
 library(Seurat)
-#library(EnsDb.Mmusculus.v79)
-#library(GenomicAlignments)
 library(Signac)
-#library(patchwork)
-#library(tidyr)
 library(dplyr)
-#library(stringr)
 library(ggplot2)
-#library(ggrepel)
-#library(gprofiler2)
-#library(forcats)
-#library(clustree)
-#library(gplots)
-#library(UpSetR)
-#library(chromVAR)
-#library(motifmatchr)
-#library(BSgenome.Mmusculus.UCSC.mm10)
-#library(circlize)
-#library(ComplexHeatmap)
-
-
-setwd("/proj/dllab/jfoster/serody_project/GitHub/GvHD/")
 
 # Output Directory -------------------------------------------------------------
 
@@ -60,12 +44,12 @@ ggsave(ilc.integrated.umap,
 
 #Number of post-transplant cells that are in pre-transplant clusters
 num_post_in_pre <- ilc.integrated@meta.data %>% 
-  dplyr::filter(orig.ident == "GFP" &
+  dplyr::filter(orig.ident == "post_transplant" &
                   (integrated_snn_res.0.4 == 0 | integrated_snn_res.0.4 == 1 |integrated_snn_res.0.4 == 2)) %>% 
   nrow()
 
 num_post <- ilc.integrated@meta.data %>% 
-  dplyr::filter(orig.ident == "GFP" ) %>% nrow()
+  dplyr::filter(orig.ident == "post_transplant" ) %>% nrow()
 
 perct_post_in_pre <- num_post_in_pre / num_post
 
@@ -73,12 +57,12 @@ writeLines(capture.output(perct_post_in_pre), "./Figure_2/Fig2b_num_postCells_cl
 
 #Number of pre-transplant cells that are in post-transplant clusters
 num_pre_in_post <- ilc.integrated@meta.data %>% 
-  dplyr::filter(orig.ident == "ILC2s" &
+  dplyr::filter(orig.ident == "pre_transplant" &
                   (integrated_snn_res.0.4 == 3 | integrated_snn_res.0.4 == 4 |integrated_snn_res.0.4 == 5)) %>% 
   nrow()
 
 num_pre <- ilc.integrated@meta.data %>% 
-  dplyr::filter(orig.ident == "ILC2s" ) %>% nrow()
+  dplyr::filter(orig.ident == "pre_transplant" ) %>% nrow()
 
 perct_pre_in_post <- num_pre_in_post / num_pre
 
