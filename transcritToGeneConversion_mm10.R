@@ -35,4 +35,4 @@ write.table(txi,
             quote=F)
 
 # Save SessionInfo 
-writeLines(capture.output(perct_pre_in_post), "./sessionInfo/transcritToGeneConversion_mm10_sessionInfo.txt")
+writeLines(capture.output(sessionInfo()), "./sessionInfo/transcritToGeneConversion_mm10_sessionInfo.txt")
