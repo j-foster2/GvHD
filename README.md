@@ -19,6 +19,11 @@ Create a folder called `processed_data`, and download the processed files from G
 
 ## Figure 1 workflow
 
+- [generate_geneLevel_RNA_expression_Fig1b.ipynb](generate_geneLevel_RNA_expression_Fig1b.ipynb) - generate input file to convert Bruce et al transcript-level RNA estimates  to gene-level estimates
+- [transcritToGeneConversion_mm10.R](transcritToGeneConversion_mm10.R) - generate gene-level RNA Abunance estimates for Bruce et al RNA abundance data
+- [bruce_RNA_laurie_foster_K4me3_data.ipynb](bruce_RNA_laurie_foster_K4me3_data.ipynb) - generate dataframe rows all genes columns include average  gene-level RNA abundance (Bruce et al.) and average H3K4me3 signal proximal to TSSs
+- [Figure_1b.R](Figure_1b.R) - generate figure 1b plot
+
 ## Figure 2 workflow
 
 - [integrate_multiome_replicate1.R](integrate_multiome_replicate1.R) - integrate first replicate of mouse single-nucleus multiome data
