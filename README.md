@@ -8,7 +8,8 @@
 - `CellRanger`: example code of hour cellranger was run on single nucleus multiome and scATAC datasets  
 - `sessionInfo`: sessionInfo for each of the R scripts
 - `Bruce_Processed_Data`: processed data from Bruce et al. (PMID: 28375154)
-- `referenceData`: mm10 gene coordinates 
+- `referenceData`: mm10 gene coordinates
+- `enrichrData`: output from Enrichr analyses 
 - `Figure_1`: output from scripts for figure 1
 - `Figure_2`: output from scripts for figure 2
 - `Figure_3`: output from scripts for figure 3
