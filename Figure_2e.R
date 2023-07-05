@@ -41,4 +41,4 @@ ggsave(enrichr_plot, file = paste0(out.dir,"Fig2e_post_transplant_geneSet_Enrich
 
 # Save Session Info ------------------------------------------------------------
 
-writeLines(capture.output(sessionInfo()), "./sessionInfo/ExtData_Figure_2e_sessionInfo.txt")
+writeLines(capture.output(sessionInfo()), "./sessionInfo/Figure_2e_sessionInfo.txt")
