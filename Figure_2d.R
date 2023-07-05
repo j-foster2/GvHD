@@ -32,7 +32,7 @@ Idents(object = ilc.integrated) <- "integrated_snn_res.0.4"
 diff_gene_list <- list()
 
 # pre-transplant differential genes relative to post-transplant cells
-pre.transplant.clusters <- c(0,2,1)
+pre.transplant.clusters <- c(1,0,2)
 
 for (pre.clust in pre.transplant.clusters) {
   
