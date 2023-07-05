@@ -34,7 +34,7 @@ rna_k4me3_data_plot <- ggplot(log2(rna_k4me3_data), aes(x=ILC2_RNA_avg, y=ILC2_K
   annotate("text", x = -8.5, y = 5, label = corr.label,, size = 1)
 
 # Save Plot
-ggsave(rna_k4me3_data_plot, file = paste0(out.dir, "Bruce_RNA_Laurie_H3K4me3_correlation", ".pdf"),
+ggsave(rna_k4me3_data_plot, file = paste0(out.dir, "Fig1b_Bruce_RNA_Laurie_H3K4me3_correlation", ".pdf"),
        height = 6, width = 6 , device = "pdf")
 
 # Save Session Info ------------------------------------------------------------
