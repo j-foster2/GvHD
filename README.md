@@ -21,27 +21,28 @@ Create a folder called `processed_data`, and download the processed files from G
 
 ## Figure 1 workflow
 
-- [generate_geneLevel_RNA_expression_Fig1b.ipynb](generate_geneLevel_RNA_expression_Fig1b.ipynb) - generate input file to convert Bruce et al transcript-level RNA estimates  to gene-level estimates
-- [transcritToGeneConversion_mm10.R](transcritToGeneConversion_mm10.R) - generate gene-level RNA Abunance estimates for Bruce et al RNA abundance data
-- [bruce_RNA_laurie_foster_K4me3_data.ipynb](bruce_RNA_laurie_foster_K4me3_data.ipynb) - generate dataframe rows all genes columns include average  gene-level RNA abundance (Bruce et al.) and average H3K4me3 signal proximal to TSSs
-- [Figure_1b.R](Figure_1b.R) - generate figure 1b plot
-- [generate_GBA_H3K4me3_count_matrix.R](generate_GBA_H3K4me3_count_matrix.R) - generate H3K4me3 count matrix at TSSs (including 300 bp upstream and 500 downstream)  
-- [GBA_H3K4me3_DESeq2.R](GBA_H3K4me3_DESeq2.R) - identify TSSs with differential H3K4me3 signal across three subtypes of ILCs
+- [generate_geneLevel_RNA_expression_Fig1b.ipynb](generate_geneLevel_RNA_expression_Fig1b.ipynb) - generates input file to convert Bruce et al transcript-level RNA estimates  to gene-level estimates
+- [transcritToGeneConversion_mm10.R](transcritToGeneConversion_mm10.R) - generates gene-level RNA Abunance estimates for Bruce et al RNA abundance data
+- [bruce_RNA_laurie_foster_K4me3_data.ipynb](bruce_RNA_laurie_foster_K4me3_data.ipynb) - generates dataframe rows all genes columns include average  gene-level RNA abundance (Bruce et al.) and average H3K4me3 signal proximal to TSSs
+- [Figure_1b.R](Figure_1b.R) - generates figure 1b plot
+- [generate_GBA_H3K4me3_count_matrix.R](generate_GBA_H3K4me3_count_matrix.R) - generates H3K4me3 count matrix at TSSs (including 300 bp upstream and 500 downstream)  
+- [GBA_H3K4me3_DESeq2.R](GBA_H3K4me3_DESeq2.R) - identifes TSSs with differential H3K4me3 signal across three subtypes of ILCs
 - [ExtData_Figure_1.ipynb](ExtData_Figure_1.ipynb) - hierarchical clustering on differential H3K4me3 singal and generates Extended Data Figure 1c-e 
-- [Figure_1c.ipynb](Figure_1c.ipynb) - generate figure 1c plot
+- [Figure_1c.ipynb](Figure_1c.ipynb) - generates figure 1c plot
 
 ## Figure 2 workflow
 
-- [integrate_multiome_replicate1.R](integrate_multiome_replicate1.R) - integrate first replicate of mouse single-nucleus multiome data
-- [integrate_multiome_replicate2.R](integrate_multiome_replicate2.R) - integrate second replicate of mouse single-nucleus multiome data
-- [Figure_2b.R](Figure_2b.R) - generate figure 2b plot 
-- [Figure_2c.R](Figure_2c.R) - generate figure 2c plot
-- [Figure_2d.R](Figure_2d.R) - generate figure 2d plot
-- [ExtData_Figure_2d.R](ExtData_Figure_2d.R) - generate extended data figure 2d plot
+- [integrate_multiome_replicate1.R](integrate_multiome_replicate1.R) - integrates first replicate of mouse single-nucleus multiome data
+- [integrate_multiome_replicate2.R](integrate_multiome_replicate2.R) - integrates second replicate of mouse single-nucleus multiome data
+- [Figure_2b.R](Figure_2b.R) - generates figure 2b plot 
+- [Figure_2c.R](Figure_2c.R) - generates figure 2c plot
+- [Figure_2d.R](Figure_2d.R) - generates figure 2d plot
+- [ExtData_Figure_2d.R](ExtData_Figure_2d.R) - generates extended data figure 2d plot
 - [post_transplant_geneSet_Enrichr.ipynb](post_transplant_geneSet_Enrichr.ipynb) - description of post-transplant gene set enrichr analysis and data formatting
-- [Figure_2e.R](Figure_2e.R) - generate figure 2e plot
-- [Figure_2f.R](Figure_2f.R) - generate figure 2f plot
-- [Figure_2g.R](Figure_2g.R) - generate figure 2g plot
+- [Figure_2e.R](Figure_2e.R) - generates figure 2e plot
+- [Figure_2f.R](Figure_2f.R) - generates figure 2f plot
+- [Figure_2g.R](Figure_2g.R) - generates figure 2g plot
+- [Figure_2h.R](Figure_2h.R) - generates figure 2h plot
 
 ## Figure 3 workflow
 
