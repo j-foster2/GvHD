@@ -36,6 +36,7 @@ Create a folder called `processed_data`, and download the processed files from G
 - [Figure_2b.R](Figure_2b.R) - generate figure 2b plot 
 - [Figure_2c.R](Figure_2c.R) - generate figure 2c plot
 - [Figure_2d.R](Figure_2d.R) - generate figure 2d plot
+- [ExtData_Figure_2d.R](ExtData_Figure_2d.R) - generate extended data figure 2d plot
 
 ## Figure 3 workflow
 
