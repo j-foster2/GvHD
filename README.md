@@ -40,6 +40,7 @@ Create a folder called `processed_data`, and download the processed files from G
 - [ExtData_Figure_2d.R](ExtData_Figure_2d.R) - generate extended data figure 2d plot
 - [post_transplant_geneSet_Enrichr.ipynb](post_transplant_geneSet_Enrichr.ipynb) - description of post-transplant gene set enrichr analysis and data formatting
 - [Figure_2e.R](Figure_2e.R) - generate figure 2e plot
+- [Figure_2f.R](Figure_2f.R) - generate figure 2f plot
 
 ## Figure 3 workflow
 
