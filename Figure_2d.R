@@ -85,6 +85,9 @@ for (post.clust in post.transplant.clusters) {
               quote = F)
 }
 
+# Store list of differential genes for each cluster
+saveRDS(diff_gene_list, file = paste0(out.dir, "Fig2d_gene_sets.rds"))
+
 # Generate Union Set of differential genes
 
 # Clusters to cycle through
