@@ -11,7 +11,8 @@
 - `Figure_2`: output from scripts for figure 2
 - `Figure_3`: output from scripts for figure 3
 - `Figure_4`: output from scripts for figure 4
-
+- `Bruce_Processed_Data`: processed data from Bruce et al. (PMID: 28375154)
+- `referenceData`: mm10 gene coordinates 
 
 ## Data
 
