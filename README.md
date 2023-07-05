@@ -34,7 +34,7 @@ Create a folder called `processed_data`, and download the processed files from G
 - [integrate_multiome_replicate1.R](integrate_multiome_replicate1.R) - integrate first replicate of mouse single-nucleus multiome data
 - [integrate_multiome_replicate2.R](integrate_multiome_replicate2.R) - integrate second replicate of mouse single-nucleus multiome data
 - [Figure_2b.R](Figure_2b.R) - generate figure 2b plot 
-
+- [Figure_2c.R](Figure_2c.R) - generate figure 2c plot
 
 
 ## Figure 3 workflow
