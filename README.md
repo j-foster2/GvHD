@@ -43,6 +43,7 @@ Create a folder called `processed_data`, and download the processed files from G
 - [Figure_2f.R](Figure_2f.R) - generates figure 2f plot
 - [Figure_2g.R](Figure_2g.R) - generates figure 2g plot
 - [Figure_2h.R](Figure_2h.R) - generates figure 2h plot
+- [Figure_2i_m.R](Figure_2i_m.R) - generates figure 2i-m plots
 
 ## Figure 3 workflow
 
