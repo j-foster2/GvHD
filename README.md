@@ -4,8 +4,8 @@
 
 (Code needs to be exected as described below for all directories to appear)
 
-- `processed_data`: run through data-appropriate pipeline (i.e. CellRanger)
-- `CellRanger`: example code of hour cellranger was run on single nucleus multiome and scATAC datasets  
+- `processed_data`: data run through data-appropriate pipeline (i.e. CellRanger)
+- `CellRanger`: example code of how cellranger was run on single nucleus multiome and scATAC datasets  
 - `sessionInfo`: sessionInfo for each of the R scripts
 - `Bruce_Processed_Data`: processed data from Bruce et al. (PMID: 28375154)
 - `GBA_Processed_Data`: MARS-seq processed data from Gury-BenAri et al. (PMID: 27545347)
@@ -45,6 +45,8 @@ Create a folder called `processed_data`, and download the processed files from G
 - [Figure_2g.R](Figure_2g.R) - generates figure 2g plot
 - [Figure_2h.R](Figure_2h.R) - generates figure 2h plot
 - [Figure_2i_m.R](Figure_2i_m.R) - generates figure 2i-m plots
+- [integrate_post_transplant_replicate2_GBA.R](integrate_post_transplant_replicate2_GBA.R) - integrates second replicate of post-transplant multiome data with GBA  MARS-seq data
+- [Figure_2n_o.R](Figure_2n_o.R) - generates figure 2n-o plots
 
 ## Figure 3 workflow
 
