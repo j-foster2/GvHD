@@ -1,8 +1,6 @@
 # Integration of the second replicate of single cell Multiome data 
 #
-# Used for Figure 2b, c
-
-# Memory Requirement: 
+# Memory Requirement: 100g
 
 library(Seurat)
 library(Signac)
