@@ -47,6 +47,9 @@ Create a folder called `processed_data`, and download the processed files from G
 - [Figure_2i_m.R](Figure_2i_m.R) - generates figure 2i-m plots
 - [integrate_post_transplant_replicate2_GBA.R](integrate_post_transplant_replicate2_GBA.R) - integrates second replicate of post-transplant multiome data with GBA  MARS-seq data
 - [Figure_2n_o.R](Figure_2n_o.R) - generates figure 2n-o plots
+- [integrate_all_multiome_data.R](integrate_all_multiome_data.R) - integrates all single-nucleus multiome data using RNA signal
+- [ExtData_Figure_2e_f.R](ExtData_Figure_2e_f.R) - generates extended data figure 2e-f plots
+
 
 ## Figure 3 workflow
 
