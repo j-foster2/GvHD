@@ -212,7 +212,7 @@ for (i in 1:length(clusters.names)) {
       geom_text(aes(label= round(avg_auc, digits = 2)), vjust=1.25, hjust=1.25, color="white", size=3.5)
     
     
-    output.filename = paste0(out.dir,"Fig2m_", cluster.labels[i], "_cluster", cluster,"_v_postClusters_candidate_TF.pdf")
+    output.filename = paste0(out.dir,"Fig2m_", cluster.labels[i], "_cluster", cluster,"_v_preClusters_candidate_TF.pdf")
     
     ggsave(file = output.filename,height = 4.6, width = 3, device = "pdf")
     
