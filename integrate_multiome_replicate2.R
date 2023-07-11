@@ -22,6 +22,7 @@ library(gprofiler2)
 #library(forcats)
 library(clustree)
 #library(circlize)
+library(BiocParallel)
 
 
 setwd("/proj/dllab/jfoster/serody_project/GitHub/GvHD/")
@@ -259,6 +260,8 @@ ilc.integrated <- SetAssayData(ilc.integrated,
                                slot = 'motifs',
                                new.data = motif.object)
 
+
+register(MulticoreParam(20))
 ilc.integrated <- RunChromVAR(
   object = ilc.integrated,
   genome = BSgenome.Mmusculus.UCSC.mm10

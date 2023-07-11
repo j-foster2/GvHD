@@ -1,32 +1,27 @@
-# Integration of the first replicate of single cell Multiome data 
+# Integration of the second replicate of single cell Multiome data 
 #
-# Used for Figure 2
+# Memory Requirement: 100g
 
-
-library(JASPAR2020)
-library(TFBSTools)
 library(Seurat)
-library(EnsDb.Mmusculus.v79)
-library(GenomicAlignments)
 library(Signac)
-library(patchwork)
-library(tidyr)
-library(dplyr)
-library(stringr)
-library(ggplot2)
-library(ggrepel)
-library(gprofiler2)
-library(forcats)
-library(clustree)
-library(gplots)
-library(UpSetR)
 library(chromVAR)
 library(motifmatchr)
+library(JASPAR2020)
+library(TFBSTools)
+library(ggplot2)
+library(gplots)
+library(ggrepel)
+library(tidyr)
+library(dplyr)
+library(patchwork)
+library(stringr)
+library(EnsDb.Mmusculus.v79)
 library(BSgenome.Mmusculus.UCSC.mm10)
-library(circlize)
-library(ComplexHeatmap)
+library(GenomicAlignments)
+library(gprofiler2)
+library(clustree)
+library(BiocParallel)
 
-setwd("/proj/dllab/jfoster/serody_project/GitHub/GvHD/")
 
 # Output Directory -------------------------------------------------------------
 
@@ -40,7 +35,7 @@ pwm_set <- getMatrixSet(x = JASPAR2020,
                                     tax_group = 'vertebrates',
                                     all_versions = FALSE))
 
-print(pwm_set)
+
 # Reference GRanges for mm10 ---------------------------------------------------
 
 annotations <- GetGRangesFromEnsDb(ensdb = EnsDb.Mmusculus.v79)
@@ -51,9 +46,9 @@ genome(annotations) <- "mm10"
 # Load Multiome data - HDF5 format ---------------------------------------------
 
 #Load Pre-transplant and post-transplant data 
-pre_transplant.data <- Read10X_h5("./data/ilc2_pre-transplant_rep1_filtered_feature_bc_matrix.h5")
+pre_transplant.data <- Read10X_h5("./processed_data/ilc2_pre-transplant_rep1_filtered_feature_bc_matrix.h5")
 
-post_transplant.data <- Read10X_h5("./data/ILC2_post-transplant_rep1_filtered_feature_bc_matrix.h5")
+post_transplant.data <- Read10X_h5("./processed_data/ILC2_post-transplant_rep1_filtered_feature_bc_matrix.h5")
 
 
 # Read Pre-transplant ILC2 data - (including peak identification) --------------
@@ -74,7 +69,7 @@ grange.use <- seqnames(grange.counts) %in% standardChromosomes(grange.counts)
 pre_transplant.atac_counts <- pre_transplant.atac_counts[as.vector(grange.use), ]
 
 # Store snATAC Fragment file
-pre_transplant_frag.file <- "./data/ilc2_pre-transplant_rep1_atac_fragments.tsv.gz"
+pre_transplant_frag.file <- "./processed_data/ilc2_pre-transplant_rep1_atac_fragments.tsv.gz"
 
 chrom_assay <- CreateChromatinAssay(
   counts = pre_transplant.atac_counts,
@@ -107,7 +102,7 @@ grange.use <- seqnames(grange.counts) %in% standardChromosomes(grange.counts)
 post_transplant.atac_counts <- post_transplant.atac_counts[as.vector(grange.use), ]
 
 
-post_transplant.frag.file <- "./data/ILC2_post-transplant_rep1_atac_fragments.tsv.gz"
+post_transplant.frag.file <- "./processed_data/ILC2_post-transplant_rep1_atac_fragments.tsv.gz"
 
 chrom_assay <- CreateChromatinAssay(
   counts = post_transplant.atac_counts,
@@ -208,17 +203,6 @@ ilc.integrated@misc <- append(ilc.integrated@misc, list(ilc.clusttree))
 
 names(ilc.integrated@misc) <- c("clusterOptimizationPlot")
 
-#View plot
-ilc.integrated@misc$clusterOptimizationPlot
-
-
-# Drop two cells that cluster on their own at multiple resolution values -------
-
-cells.to.remove <- c(row.names(ilc.integrated@meta.data %>%
-                                 dplyr::filter(ilc.integrated@meta.data['integrated_snn_res.0.05'] == 2)))
-
-ilc.integrated <- ilc.integrated[,!colnames(ilc.integrated) %in% cells.to.remove]
-
 
 # RNA analysis (Seurat workflow) -----------------------------------------------
 
@@ -264,6 +248,7 @@ ilc.integrated <- SetAssayData(ilc.integrated,
                                slot = 'motifs',
                                new.data = motif.object)
 
+register(MulticoreParam(20))
 ilc.integrated <- RunChromVAR(
   object = ilc.integrated,
   genome = BSgenome.Mmusculus.UCSC.mm10
