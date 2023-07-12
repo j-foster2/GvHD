@@ -55,4 +55,9 @@ Create a folder called `processed_data`, and download the processed files from G
 
 ## Figure 3 workflow
 
+- [Figure_3d.R](Figure_3d.R) - generates figure 3d plot
+- [mouse_ATAC_peak_union_set.ipynb](mouse_ATAC_peak_union_set.ipynb) - identifies the union set of ATAC peaks (Figure 3e)
+- [generate_pcILC2_ILC2_ATAC_count_matrix.R](generate_pcILC2_ILC2_ATAC_count_matrix.R) - counts of all peaks in union set (Figure 3e)
+- [ILC2_pcILC2_ATAC_DESeq2.R](ILC2_pcILC2_ATAC_DESeq2.R) - differential analysis of peaks in union set (Figure 3e)
+- [Figure_3e.ipynb](Figure_3e.ipynb) - generates figure 3e plot
 ## Figure 4 workflow
