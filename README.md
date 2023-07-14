@@ -63,7 +63,7 @@ Create a folder called `processed_data`, and download the processed files from G
 - [Figure_3e.py](Figure_3e.py) - generates figure 3e plot
 - [integrate_inVitro_ILC2_pcILC2_replicate1.R](integrate_inVitro_ILC2_pcILC2_replicate1.R) - integrates first replicate of mouse ILC2 and pcILC2 data
 - [Figure_3g.R](Figure_3g.R) - generates figure 3g plot
-- [Figure_3h.R](Figure_3h.R) - generates figure 3g plot
+- [Figure_3h.R](Figure_3h.R) - generates figure 3h plot
 
 
 ## Figure 4 workflow
