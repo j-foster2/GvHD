@@ -61,6 +61,7 @@ Create a folder called `processed_data`, and download the processed files from G
 - [generate_pcILC2_ILC2_ATAC_count_matrix.R](generate_pcILC2_ILC2_ATAC_count_matrix.R) - counts of all peaks in union set (Figure 3e)
 - [ILC2_pcILC2_ATAC_DESeq2.R](ILC2_pcILC2_ATAC_DESeq2.R) - differential analysis of peaks in union set (Figure 3e)
 - [Figure_3e.py](Figure_3e.py) - generates figure 3e plot
+- [integrate_inVitro_ILC2_pcILC2_replicate1.R](integrate_inVitro_ILC2_pcILC2_replicate1.R) - integrates first replicate of mouse ILC2 and pcILC2 data
 - [Figure_3g.R](Figure_3g.R) - generates figure 3g plot
 
 ## Figure 4 workflow
