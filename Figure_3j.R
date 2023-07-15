@@ -14,7 +14,7 @@ out.dir <- "./Figure_3/"
 ilc.integrated <- readRDS(file = "./Figure_3/inVitro_ILC2_pcILC2_integrated_rep1.rds")
 
 
-# Figure 3f --------------------------------------------------------------------
+# Figure 3j --------------------------------------------------------------------
 
 # Expression overlay for a couple of ICL1 associated genes
 genesOfInterest <- c('Tbx21', 'Ifng')
