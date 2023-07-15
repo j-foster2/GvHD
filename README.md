@@ -64,6 +64,8 @@ Create a folder called `processed_data`, and download the processed files from G
 - [integrate_inVitro_ILC2_pcILC2_replicate1.R](integrate_inVitro_ILC2_pcILC2_replicate1.R) - integrates first replicate of mouse ILC2 and pcILC2 data
 - [Figure_3g.R](Figure_3g.R) - generates figure 3g plot
 - [Figure_3h.R](Figure_3h.R) - generates figure 3h plot
-
+- [Figure_3i.R](Figure_3i.R) - generates figure 3i plot
+- [Figure_3j.R](Figure_3j.R) - generates figure 3j plot
+- [integrate_inVitro_ILC2_pcILC2_replicate2.R](integrate_inVitro_ILC2_pcILC2_replicate2.R) - integrates second replicate of mouse ILC2 and pcILC2 data
 
 ## Figure 4 workflow
