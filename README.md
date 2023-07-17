@@ -66,6 +66,7 @@ Create a folder called `processed_data`, and download the processed files from G
 - [Figure_3h.R](Figure_3h.R) - generates figure 3h plot
 - [Figure_3i.R](Figure_3i.R) - generates figure 3i plot
 - [Figure_3j.R](Figure_3j.R) - generates figure 3j plot
+- [Figure_3k.R](Figure_3k.R) - merges ILC2, pcILC2, and post-transpant ILC2 multiome data and generates figure 3k plot
 - [integrate_inVitro_ILC2_pcILC2_replicate2.R](integrate_inVitro_ILC2_pcILC2_replicate2.R) - integrates second replicate of mouse ILC2 and pcILC2 data
 - [ExtData_Figure_3c.R](ExtData_Figure_3c.R) - genereates Extended Figure 3c
 - [ExtData_Figure_3d.R](ExtData_Figure_3d.R) - generates Extended Figure 3d
