@@ -76,3 +76,5 @@ Create a folder called `processed_data`, and download the processed files from G
 - [ExtData_Figure_3i.R](ExtData_Figure_3i.R) - generates Extended Data Figure 3i
 
 ## Figure 4 workflow
+- [integrate_human_scATAC.R](integrate_human_scATAC.R) - integrates human scATAC-seq data
+- [addPseudoExpression_integrated_human_scATAC.R](addPseudoExpression_integrated_human_scATAC.R) - Adds pseudoexpression (ATAC signal over genes) to integrated scATAC data
