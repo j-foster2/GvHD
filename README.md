@@ -78,3 +78,6 @@ Create a folder called `processed_data`, and download the processed files from G
 ## Figure 4 workflow
 - [integrate_human_scATAC.R](integrate_human_scATAC.R) - integrates human scATAC-seq data
 - [addPseudoExpression_integrated_human_scATAC.R](addPseudoExpression_integrated_human_scATAC.R) - Adds pseudoexpression (ATAC signal over genes) to integrated scATAC data
+- [Figure_4f_g.R](Figure_4f_g.R) - generates figure 4f-g plots
+- [scATAC_signal_at_bulk_ILC2_pcILC2_sharedILC2_peaks.R](scATAC_signal_at_bulk_ILC2_pcILC2_sharedILC2_peaks.R) - calculates scATAC signal at ILC2, pcILC2 associated ATAC peaks and random set of shared peaks
+- [Figure_4h_i_ExtData_Fig4a.R](Figure_4h_i_ExtData_Fig4a.R) - generates figure 4h-i plots and extended data figure 4a
