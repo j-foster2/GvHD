@@ -28,6 +28,8 @@ Create a folder called `processed_data`, and download the processed files from G
 
 - Clone repository and install Apptainer (>=1.1.3-1.el8)
 
+- Build Apptainer image file from definition file `gvhd_R4.3.1.def`
+
 - Run the bash file `sh generateFigures.sh`
 
 
