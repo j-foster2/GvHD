@@ -1,9 +1,10 @@
 Bootstrap: docker
-From: r-base
+From: r-base:4.3.1
 
 %environment
 	export PATH=/opt/miniconda3/bin:${PATH}
-
+        export PATH=/opt/homer/bin:${PATH}
+        export PATH=/opt/samtools/bin:${PATH}
 %post
         # Update Ubuntu
         apt-get -y update
@@ -84,6 +85,19 @@ From: r-base
 	R -e 'if (!require("BiocManager", quietly = TRUE))
 	    install.packages("BiocManager")
 	BiocManager::install("multtest")'
+
+        R -e 'if (!require("BiocManager", quietly = TRUE))
+            install.packages("BiocManager")
+        BiocManager::install("Rsubread")'
+
+        R -e 'if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+        BiocManager::install("edgeR")'
+
+
+        R -e 'if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+        BiocManager::install("DESeq2")'
 	
 	# R libraries 
 	R -e 'install.packages("tidyverse", dependencies=TRUE)'
@@ -100,11 +114,13 @@ From: r-base
 	R -e 'devtools::install_github("immunogenomics/presto")'
 	R -e 'remotes::install_github("mojaveazure/seurat-disk")'
 
-	# Install Python 
+	# Install Python 3.9.16
 	INSTALL_SCRIPT=Miniconda3-py39_23.3.1-0-Linux-x86_64.sh
         wget https://repo.anaconda.com/miniconda/${INSTALL_SCRIPT}
         bash ${INSTALL_SCRIPT} -b -p /opt/miniconda3
         rm ${INSTALL_SCRIPT}
+
+	# Install Python packages 
         /opt/miniconda3/bin/conda install pandas -y
         /opt/miniconda3/bin/conda install scikit-learn -y
         /opt/miniconda3/bin/conda install -c conda-forge matplotlib -y
@@ -114,3 +130,18 @@ From: r-base
 	/opt/miniconda3/bin/conda install -c anaconda ipython
         /opt/miniconda3/bin/pip install distinctipy
 	/opt/miniconda3/bin/pip install deeptools
+
+	# Install samtools
+        mkdir -p /opt/samtools && cd /opt/samtools
+        wget https://github.com/samtools/samtools/releases/download/1.17/samtools-1.17.tar.bz2
+        tar -xf samtools-1.17.tar.bz2
+        cd samtools-1.17
+        ./configure --prefix=/opt/samtools
+        make
+	make install
+
+	# Install HOMER
+        mkdir -p /opt/homer && cd /opt/homer
+        wget http://homer.ucsd.edu/homer/configureHomer.pl
+        perl /opt/homer/configureHomer.pl -install
+
