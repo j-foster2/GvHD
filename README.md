@@ -25,8 +25,8 @@ Create a folder called `processed_data`, and download the processed files from G
 - System Requirements
 	1. memory >= 100g
 	2. minimum of 24 cpus for scripts that require parallel processing
-
-- Clone repository and install Apptainer (>=1.1.3-1.el8)
+	3. slurm (>=22.05.6)
+	4. apptainer (>=1.1.3-1.el8)
 
 - Build Apptainer image file from definition file `gvhd_R4.3.1.def`
 
