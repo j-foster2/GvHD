@@ -21,6 +21,16 @@
 
 Create a folder called `processed_data`, and download the processed files from GEO SuperSeries `GSE232003`.
 
+## Generate Figures (Runs Workflows descripbed below)
+- System Requirements
+	1. memory >= 100g
+	2. minimum of 24 cpus for scripts that require parallel processing
+
+- Install Apptainer (>=1.1.3-1.el8)
+
+- Run the bash file `sh generateFigures.sh`
+
+
 ## Figure 1 workflow
 
 - [generate_geneLevel_RNA_expression_Fig1b.ipynb](generate_geneLevel_RNA_expression_Fig1b.ipynb) - generates input file to convert Bruce et al transcript-level RNA estimates  to gene-level estimates
