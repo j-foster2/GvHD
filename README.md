@@ -76,8 +76,15 @@ Create a folder called `processed_data`, and download the processed files from G
 - [ExtData_Figure_3i.R](ExtData_Figure_3i.R) - generates Extended Data Figure 3i
 
 ## Figure 4 workflow
+- [human_ATAC_peak_union_set.py](human_ATAC_peak_union_set.py) - defines union set of ATAC peaks identified in hILC2s and pc-hILC2s
+- [generate_hILC2_pc-hILC2_ATAC_count_matrix.R"](generate_hILC2_pc-hILC2_ATAC_count_matrix.R") - generates ATAC count matrix for all peaks in hILC2/pc-hILC2 union set
+- [hILC2_pc-hILC2_ATAC_DESeq2.R](hILC2_pc-hILC2_ATAC_DESeq2.R) - identifies differential ATAC peaks between hILC2 and pc-hILC2s
+- [Figure_4b.py](Figure_4b.py) - generates Figure 4b heatmap 
+- [hILC2_ATAC_homer_analysis.py](hILC2_ATAC_homer_analysis.py) - HOMER motif analysis of peaks unique to hILC2s
+- [pc-hILC2_ATAC_homerAnalysis.py](pc-hILC2_ATAC_homerAnalysis.py) - HOMER motif analysis of peaks unique to pc-hILC2s
+- [Figure_4c_d.py](Figure_4c_d.py) - generates Figure 4c-d plots
 - [integrate_human_scATAC.R](integrate_human_scATAC.R) - integrates human scATAC-seq data
 - [addPseudoExpression_integrated_human_scATAC.R](addPseudoExpression_integrated_human_scATAC.R) - Adds pseudoexpression (ATAC signal over genes) to integrated scATAC data
-- [Figure_4f_g.R](Figure_4f_g.R) - generates figure 4f-g plots
+- [Figure_4f_g.R](Figure_4f_g.R) - generates Figure 4f-g plots
 - [scATAC_signal_at_bulk_ILC2_pcILC2_sharedILC2_peaks.R](scATAC_signal_at_bulk_ILC2_pcILC2_sharedILC2_peaks.R) - calculates scATAC signal at ILC2, pcILC2 associated ATAC peaks and random set of shared peaks
-- [Figure_4h_i_ExtData_Fig4a.R](Figure_4h_i_ExtData_Fig4a.R) - generates figure 4h-i plots and extended data figure 4a
+- [Figure_4h_i_ExtData_Fig4a.R](Figure_4h_i_ExtData_Fig4a.R) - generates Figure 4h-i plots and Extended Data Figure 4a
