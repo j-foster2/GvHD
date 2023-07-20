@@ -21,12 +21,12 @@
 
 Create a folder called `processed_data`, and download the processed files from GEO SuperSeries `GSE232003`.
 
-## Generate Figures (Runs Workflows descripbed below)
+## Generate Figures (Runs Workflows described below)
 - System Requirements
 	1. memory >= 100g
 	2. minimum of 24 cpus for scripts that require parallel processing
 
-- Install Apptainer (>=1.1.3-1.el8)
+- Clone repository and install Apptainer (>=1.1.3-1.el8)
 
 - Run the bash file `sh generateFigures.sh`
 
