@@ -98,6 +98,11 @@ From: r-base:4.3.1
         R -e 'if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
         BiocManager::install("DESeq2")'
+
+	R -e 'if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+        BiocManager::install("tximport")'
+
 	
 	# R libraries 
 	R -e 'install.packages("tidyverse", dependencies=TRUE)'
