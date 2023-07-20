@@ -6,7 +6,6 @@
 
 - `processed_data`: data run through data-appropriate pipeline (i.e. CellRanger)
 - `CellRanger`: example code of how cellranger was run on single nucleus multiome and scATAC datasets  
-- `sessionInfo`: sessionInfo for each of the R scripts
 - `Bruce_Processed_Data`: processed data from Bruce et al. (PMID: 28375154)
 - `GBA_Processed_Data`: MARS-seq processed data from Gury-BenAri et al. (PMID: 27545347)
 - `referenceData`: mm10 gene coordinates
@@ -22,7 +21,7 @@
 Create a folder called `processed_data`, and download the processed files from GEO SuperSeries `GSE232003`.
 
 ## Generate Figures (Runs Workflows described below)
-- System Requirements
+- System Requirements:
 	1. memory >= 100g
 	2. minimum of 24 cpus for scripts that require parallel processing
 	3. slurm (>=22.05.6)
@@ -37,7 +36,7 @@ Create a folder called `processed_data`, and download the processed files from G
 
 - [generate_geneLevel_RNA_expression_Fig1b.ipynb](generate_geneLevel_RNA_expression_Fig1b.ipynb) - generates input file to convert Bruce et al transcript-level RNA estimates  to gene-level estimates
 - [transcritToGeneConversion_mm10.R](transcritToGeneConversion_mm10.R) - generates gene-level RNA Abunance estimates for Bruce et al RNA abundance data
-- [bruce_RNA_laurie_foster_K4me3_data.ipynb](bruce_RNA_laurie_foster_K4me3_data.ipynb) - generates dataframe rows all genes columns include average  gene-level RNA abundance (Bruce et al.) and average H3K4me3 signal proximal to TSSs
+- [bruce_RNA_laurie_foster_K4me3_data.ipynb](bruce_RNA_laurie_foster_K4me3_data.ipynb) - generates dataframe rows all genes columns include average gene-level RNA abundance (Bruce et al.) and average H3K4me3 signal proximal to TSSs
 - [Figure_1b.R](Figure_1b.R) - generates figure 1b plot
 - [generate_GBA_H3K4me3_count_matrix.R](generate_GBA_H3K4me3_count_matrix.R) - generates H3K4me3 count matrix at TSSs (including 300 bp upstream and 500 downstream)  
 - [GBA_H3K4me3_DESeq2.R](GBA_H3K4me3_DESeq2.R) - identifes TSSs with differential H3K4me3 signal across three subtypes of ILCs
