@@ -63,7 +63,7 @@ output_dir = "./Figure_4/"
 
 # Distribution of Exp1 NarrowPeak Sizes
 
-fn_exp1_narrowPeak = sorted(glob.glob('./processed_data/pcILC2_rep*narrowPeak'))
+fn_exp1_narrowPeak = sorted(glob.glob('./processed_data/pc-hILC2_rep*narrowPeak'))
 
 # Read narrowPeak files into pandas dataFrame
 l_df_exp1_narrowPeak_size = [pd.read_csv(fn, sep = '\t', header = None) for fn in fn_exp1_narrowPeak]  
@@ -93,7 +93,7 @@ exp1_narrowPeak_size_mean = pd.Series([pd.Series(list).describe()[1] for list in
 
 
 # Collect narrowPeak file names (pc-hILC2)
-fn_exp1_narrowPeak = sorted(glob.glob("./processed_data/pcILC2_rep*narrowPeak"))
+fn_exp1_narrowPeak = sorted(glob.glob("./processed_data/pc-hILC2_rep*narrowPeak"))
 
 # Read narrowPeak files into pandas dataFrame
 l_df_exp1_narrowPeak = [pd.read_csv(fn, sep = '\t', header = None) for fn in fn_exp1_narrowPeak]   
@@ -234,7 +234,7 @@ df_exp1_out.to_csv(f'{output_dir}/{exp1_name}_union_summits.bed',
 
 
 # Distribution of Peak sizes 
-fn_exp2_narrowPeak = sorted(glob.glob("./processed_data/ILC2_rep*narrowPeak"))
+fn_exp2_narrowPeak = sorted(glob.glob("./processed_data/hILC2_rep*narrowPeak"))
 
 # Read narrowPeak files into pandas dataFrame
 l_df_exp2_narrowPeak_size = [pd.read_csv(fn, sep = '\t', header = None) for fn in fn_exp2_narrowPeak]  
@@ -275,7 +275,7 @@ exp2_narrowPeak_size_mean = pd.Series([pd.Series(list).describe()[1] for list in
 
 
 # Collect narrowPeak file names
-fn_exp2_narrowPeak = sorted(glob.glob("./processed_data/ILC2_rep*narrowPeak"))
+fn_exp2_narrowPeak = sorted(glob.glob("./processed_data/hILC2_rep*narrowPeak"))
 
 # Read narrowPeak files into pandas dataFrame
 l_df_exp2_narrowPeak = [pd.read_csv(fn, sep = '\t', header = None) for fn in fn_exp2_narrowPeak]   
