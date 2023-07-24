@@ -17,16 +17,13 @@
 - `Figure_4`: output from scripts for figure 4
 
 ## Data
-Raw data were processed as described in the manuscript. 
+All raw data avaiable for download via GEO SuperSeries `GSE232003` 
 
-Raw data from previously published studies was processed as described in manuscript and those processed data can be
-downloaded here:
+	1. human scATAC-seq data available here: `GSE232002`
+	2. mouse  10x Multiome data available here: `GSE232001`
+	3. mouse ChIP-seq data avaiable here: `GSE232000`
+	4. human and mouse ATAC-seq data avaiable here: `GSE231999`
 
-Processed data from this study can be downloaed from GEO SuperSeries `GSE232003`.
-
-To execute code create a folder called `processed_data`, and store all memtioned data above.
-
-TODO bash file that checks for all the processed data.
 
 ## Generate Figures (Runs Workflows described below)
 - System Requirements:
@@ -35,22 +32,35 @@ TODO bash file that checks for all the processed data.
 	3. slurm (>=22.05.6)
 	4. apptainer (>=1.1.3-1.el8)
 
-- Generate BAM files from Gury-BenAri et al. H3K4me3 ChIP-seq data
-	1. Download H3K4me3 data from ILC1, ILC2, and ILC3 cells (GSE85156)
+- Create directory `processed_data` and extract processed data into directory as as described below.
+
+- Download processed data from the follow repositories 
+	1. human scATAC-seq data available here: `GSE232002`
+        2. mouse  10x Multiome data available here: `GSE232001`
+        3. mouse ChIP-seq data avaiable here: `GSE232000`
+        4. human and mouse ATAC-seq data avaiable here: `GSE231999`
+
+- Generate BAM files from Gury-BenAri et al. H3K4me3 ChIP-seq data (additional details in methods section)
+	1. Download H3K4me3 fastq files for ILC1, ILC2, and ILC3 cells (GSE85156)
 	2. Merge fastq file to create one fastq for each replicate
 	3. Trim reads cutadapt (v. 1.12)
-	4. Quality filter FASTX-ToolKit (v0.0.12) with parameters (Q 33, -p 90, and q 20)
-	5. Align to mm10 with STAR (v2.5.2b) with options (options: --outFilterScoreMin 1, --outFilterMultimapNmax 1 --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterType BySJout, --chimSegmentMin 1)
+	4. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
+	5. Align to mm10 with STAR (v2.5.2b) (options: --outFilterScoreMin 1, --outFilterMultimapNmax 1 --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterType BySJout, --chimSegmentMin 1)
 
-
-- Generate BAM files for mouse ATAC-seq data
-
-- Generate BAM files for human
+- Generate BAM files for human and mouse ATAC-seq data (additional details in methods section)
+        1. Download fastq files for mouse and human samples `GSE231999`
+        2. Trim reads cutadapt (v. 1.12)
+        3. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
+	3. PCR duplicates limited to 5
+        4. Align to mm10 with STAR (v2.5.2b) (options: –chimSegmentMin 15, --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterScoreMin 1, --outFilterType    BySJout    and    --outFilterMultimapNmax 1)
 
 - Build Apptainer image file from definition file `gvhd_R4.3.1.def`
 
-- Run the bash file `sh generateFigures.sh`
+- Run work flows described below
 
+- Alternatively, download processed data including bam files here [PROVIDE LINK to Zenodo repository] and extract into directory `processed_data`
+	1. Build Apptainer image file from definition file `gvhd_R4.3.1.def`
+	2. Run the bash file `sh generateFigures.sh`
 
 ## Figure 1 workflow
 
