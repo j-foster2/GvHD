@@ -36,9 +36,9 @@ All raw data avaiable for download via GEO SuperSeries `GSE232003`
 
 - Download processed data from the follow repositories 
 	1. human scATAC-seq data available here: `GSE232002`
-        2. mouse  10x Multiome data available here: `GSE232001`
-        3. mouse ChIP-seq data avaiable here: `GSE232000`
-        4. human and mouse ATAC-seq data avaiable here: `GSE231999`
+	2. mouse  10x Multiome data available here: `GSE232001`
+	3. mouse ChIP-seq data avaiable here: `GSE232000`
+	4. human and mouse ATAC-seq data avaiable here: `GSE231999`
 
 - Generate BAM files from Gury-BenAri et al. H3K4me3 ChIP-seq data (additional details in methods section)
 	1. Download H3K4me3 fastq files for ILC1, ILC2, and ILC3 cells (GSE85156)
