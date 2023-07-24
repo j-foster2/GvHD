@@ -17,8 +17,16 @@
 - `Figure_4`: output from scripts for figure 4
 
 ## Data
+Raw data were processed as described in the manuscript. 
 
-Create a folder called `processed_data`, and download the processed files from GEO SuperSeries `GSE232003`.
+Raw data from previously published studies was processed as described in manuscript and those processed data can be
+downloaded here:
+
+Processed data from this study can be downloaed from GEO SuperSeries `GSE232003`.
+
+To execute code create a folder called `processed_data`, and store all memtioned data above.
+
+TODO bash file that checks for all the processed data.
 
 ## Generate Figures (Runs Workflows described below)
 - System Requirements:
@@ -26,6 +34,18 @@ Create a folder called `processed_data`, and download the processed files from G
 	2. minimum of 24 cpus for scripts that require parallel processing
 	3. slurm (>=22.05.6)
 	4. apptainer (>=1.1.3-1.el8)
+
+- Generate BAM files from Gury-BenAri et al. H3K4me3 ChIP-seq data
+	1. Download H3K4me3 data from ILC1, ILC2, and ILC3 cells (GSE85156)
+	2. Merge fastq file to create one fastq for each replicate
+	3. Trim reads cutadapt (v. 1.12)
+	4. Quality filter FASTX-ToolKit (v0.0.12) with parameters (Q 33, -p 90, and q 20)
+	5. Align to mm10 with STAR (v2.5.2b) with options (options: --outFilterScoreMin 1, --outFilterMultimapNmax 1 --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterType BySJout, --chimSegmentMin 1)
+
+
+- Generate BAM files for mouse ATAC-seq data
+
+- Generate BAM files for human
 
 - Build Apptainer image file from definition file `gvhd_R4.3.1.def`
 
