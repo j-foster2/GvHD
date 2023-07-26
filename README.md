@@ -8,7 +8,7 @@
 - `CellRanger`: example code of how cellranger was run on single nucleus multiome and scATAC datasets  
 - `Bruce_Processed_Data`: processed data from Bruce et al. (PMID: 28375154)
 - `GBA_Processed_Data`: MARS-seq processed data from Gury-BenAri et al. (PMID: 27545347)
-- `referenceData`: mm10 gene coordinates
+- `referenceData`: mm10 gene coordinates and genes associated with mouse ILC1 and ILC2 cells
 - `enrichrData`: output from Enrichr analyses 
 - `jupyterNotebooks`: Store notebook versions of scripts used to processed data and generate figures
 - `Figure_1`: output from scripts for figure 1
@@ -39,19 +39,29 @@
 	3. mouse ChIP-seq data avaiable here: `GSE232000`
 	4. human and mouse ATAC-seq data avaiable here: `GSE231999`
 
-- Generate BAM files from Gury-BenAri et al. H3K4me3 ChIP-seq data (additional details in methods section)
+- Generate .bam and .bai files from Gury-BenAri et al. H3K4me3 ChIP-seq data (additional details in methods section)
 	1. Download H3K4me3 fastq files for ILC1, ILC2, and ILC3 cells (GSE85156)
 	2. Merge fastq file to create one fastq for each replicate
-	3. Trim reads cutadapt (v. 1.12)
+	3. Trim reads cutadapt (v1.12)
 	4. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
 	5. Align to mm10 with STAR (v2.5.2b) (options: --outFilterScoreMin 1, --outFilterMultimapNmax 1 --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterType BySJout, --chimSegmentMin 1)
+	6. File name prefix convention (follow to help in execution of figure generation workflows):
+		1. ILC1 samples: blfILC1_GBA_H3K4me3_rep
+		2. ILC2 samples: blfILC2_GBA_H3K4me3_rep
+		3. ILC3 samples: blfILC3_GBA_H3K4me3_rep
 
-- Generate BAM files for human and mouse ATAC-seq data (additional details in methods section)
+- Generate .bam and .bai files for human and mouse ATAC-seq data (additional details in methods section)
 	1. Download fastq files for mouse and human samples `GSE231999`
-	2. Trim reads cutadapt (v. 1.12)
+	2. Trim reads cutadapt (v1.12)
 	3. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
 	4. PCR duplicates limited to 5
 	5. Align to mm10 with STAR (v2.5.2b) (options: –chimSegmentMin 15, --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterScoreMin 1, --outFilterType    BySJout    and    --outFilterMultimapNmax 1)
+	6. Filename prefix convention (follow to help in execution of figure generation workflows):
+		1. mouse ILC1 samples: mILC1_ATAC_rep
+			*Note: label ILC1 = pcILC2 in figures
+		2. mouse ILC2 samples: mILC2_ATAC_rep
+		3. human ILC1 samples: hILC2_ATAC_rep
+		4. human ILC2 samples: pc-hILC2_ATAC_rep
 
 - Build Apptainer image file from definition file `gvhd_R4.3.1.def`
 
