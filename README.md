@@ -5,7 +5,6 @@
 (Code needs to be exected as described below for all directories to appear)
 
 - `processed_data`: data run through data-appropriate pipeline (i.e. CellRanger)
-- `CellRanger`: example code of how cellranger was run on single nucleus multiome and scATAC datasets  
 - `Bruce_Processed_Data`: processed data from Bruce et al. (PMID: 28375154)
 - `GBA_Processed_Data`: MARS-seq processed data from Gury-BenAri et al. (PMID: 27545347)
 - `referenceData`: mm10 gene coordinates and genes associated with mouse ILC1 and ILC2 cells
