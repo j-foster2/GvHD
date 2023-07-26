@@ -64,14 +64,14 @@ All raw data avaiable for download via GEO SuperSeries `GSE232003`
 
 ## Figure 1 workflow
 
-- [generate_geneLevel_RNA_expression_Fig1b.ipynb](generate_geneLevel_RNA_expression_Fig1b.ipynb) - generates input file to convert Bruce et al transcript-level RNA estimates  to gene-level estimates
+- [generate_geneLevel_RNA_expression_Fig1b.py](generate_geneLevel_RNA_expression_Fig1b.py) - generates input file to convert Bruce et al transcript-level RNA estimates  to gene-level estimates
 - [transcritToGeneConversion_mm10.R](transcritToGeneConversion_mm10.R) - generates gene-level RNA Abunance estimates for Bruce et al RNA abundance data
-- [bruce_RNA_laurie_foster_K4me3_data.ipynb](bruce_RNA_laurie_foster_K4me3_data.ipynb) - generates dataframe rows all genes columns include average gene-level RNA abundance (Bruce et al.) and average H3K4me3 signal proximal to TSSs
+- [bruce_RNA_laurie_foster_K4me3_data.py](bruce_RNA_laurie_foster_K4me3_data.py) - generates dataframe rows all genes columns include average gene-level RNA abundance (Bruce et al.) and average H3K4me3 signal proximal to TSSs
 - [Figure_1b.R](Figure_1b.R) - generates figure 1b plot
 - [generate_GBA_H3K4me3_count_matrix.R](generate_GBA_H3K4me3_count_matrix.R) - generates H3K4me3 count matrix at TSSs (including 300 bp upstream and 500 downstream)  
 - [GBA_H3K4me3_DESeq2.R](GBA_H3K4me3_DESeq2.R) - identifes TSSs with differential H3K4me3 signal across three subtypes of ILCs
-- [ExtData_Figure_1.ipynb](ExtData_Figure_1.ipynb) - hierarchical clustering on differential H3K4me3 singal and generates Extended Data Figure 1c-e 
-- [Figure_1c.ipynb](Figure_1c.ipynb) - generates figure 1c plot
+- [ExtData_Figure_1.py](ExtData_Figure_1.py) - hierarchical clustering on differential H3K4me3 singal and generates Extended Data Figure 1c-e 
+- [Figure_1c.py](Figure_1c.py) - generates figure 1c plot
 
 ## Figure 2 workflow
 
