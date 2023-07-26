@@ -17,8 +17,7 @@
 - `Figure_4`: output from scripts for figure 4
 
 ## Data
-All raw data avaiable for download via GEO SuperSeries `GSE232003` 
-
+- All raw data avaiable for download via GEO SuperSeries `GSE232003` 
 	1. human scATAC-seq data available here: `GSE232002`
 	2. mouse  10x Multiome data available here: `GSE232001`
 	3. mouse ChIP-seq data avaiable here: `GSE232000`
@@ -48,11 +47,11 @@ All raw data avaiable for download via GEO SuperSeries `GSE232003`
 	5. Align to mm10 with STAR (v2.5.2b) (options: --outFilterScoreMin 1, --outFilterMultimapNmax 1 --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterType BySJout, --chimSegmentMin 1)
 
 - Generate BAM files for human and mouse ATAC-seq data (additional details in methods section)
-        1. Download fastq files for mouse and human samples `GSE231999`
-        2. Trim reads cutadapt (v. 1.12)
-        3. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
-	3. PCR duplicates limited to 5
-        4. Align to mm10 with STAR (v2.5.2b) (options: –chimSegmentMin 15, --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterScoreMin 1, --outFilterType    BySJout    and    --outFilterMultimapNmax 1)
+	1. Download fastq files for mouse and human samples `GSE231999`
+	2. Trim reads cutadapt (v. 1.12)
+	3. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
+	4. PCR duplicates limited to 5
+	5. Align to mm10 with STAR (v2.5.2b) (options: –chimSegmentMin 15, --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterScoreMin 1, --outFilterType    BySJout    and    --outFilterMultimapNmax 1)
 
 - Build Apptainer image file from definition file `gvhd_R4.3.1.def`
 
