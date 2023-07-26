@@ -89,7 +89,7 @@
 - [Figure_2c.R](Figure_2c.R) - generates figure 2c plot
 - [Figure_2d.R](Figure_2d.R) - generates figure 2d plot
 - [ExtData_Figure_2d.R](ExtData_Figure_2d.R) - generates extended data figure 2d plot
-- [post_transplant_geneSet_Enrichr.ipynb](post_transplant_geneSet_Enrichr.ipynb) - description of post-transplant gene set enrichr analysis and data formatting
+- [post_transplant_geneSet_Enrichr.py](post_transplant_geneSet_Enrichr.py) - description of post-transplant gene set enrichr analysis and data formatting
 - [Figure_2e.R](Figure_2e.R) - generates figure 2e plot
 - [Figure_2f.R](Figure_2f.R) - generates figure 2f plot
 - [Figure_2g.R](Figure_2g.R) - generates figure 2g plot
