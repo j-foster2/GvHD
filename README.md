@@ -30,6 +30,8 @@
 	3. slurm (>=22.05.6)
 	4. apptainer (>=1.1.3-1.el8)
 
+- These scripts take as input post-alignment data. A description of how how fastq files were processed can be found in the methods section of the manuscript. 
+
 - Create directory `processed_data` and extract supplemental data from the follow repositories into that directory 
 	1. human scATAC-seq data available here: `GSE232002`
 	2. mouse  10x Multiome data available here: `GSE232001`
@@ -124,7 +126,7 @@
 
 ## Figure 4 workflow
 - [human_ATAC_peak_union_set.py](human_ATAC_peak_union_set.py) - defines union set of ATAC peaks identified in hILC2s and pc-hILC2s
-- [generate_hILC2_pc-hILC2_ATAC_count_matrix.R"](generate_hILC2_pc-hILC2_ATAC_count_matrix.R") - generates ATAC count matrix for all peaks in hILC2/pc-hILC2 union set
+- [generate_hILC2_pc-hILC2_ATAC_count_matrix.R](generate_hILC2_pc-hILC2_ATAC_count_matrix.R) - generates ATAC count matrix for all peaks in hILC2/pc-hILC2 union set
 - [hILC2_pc-hILC2_ATAC_DESeq2.R](hILC2_pc-hILC2_ATAC_DESeq2.R) - identifies differential ATAC peaks between hILC2 and pc-hILC2s
 - [Figure_4b.py](Figure_4b.py) - generates Figure 4b heatmap 
 - [hILC2_ATAC_homer_analysis.py](hILC2_ATAC_homer_analysis.py) - HOMER motif analysis of peaks unique to hILC2s
