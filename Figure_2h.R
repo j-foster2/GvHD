@@ -12,7 +12,11 @@ library(dplyr)
 library(ggplot2)
 library(ComplexHeatmap)
 library(circlize)
+library(future)
 
+# set number of cores to be used by FindMarkers
+
+plan("multisession", workers = 16)
 # Output Directory -------------------------------------------------------------
 
 out.dir <- "./Figure_2/"
