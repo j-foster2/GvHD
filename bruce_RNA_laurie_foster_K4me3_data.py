@@ -74,12 +74,6 @@ rna_data = rna_data.loc[:,"abundance.ILC2_RNA_Bruce_rep1":"abundance.ILC2_RNA_Br
 # In[ ]:
 
 
-str_k4me3_bw
-
-
-# In[ ]:
-
-
 # Read the bigWig file names for all acute ChIP-seq data
 path_To_Laurie_Foster_K4me3_Data = './processed_data/'
 
