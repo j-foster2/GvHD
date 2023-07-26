@@ -30,15 +30,13 @@
 	3. slurm (>=22.05.6)
 	4. apptainer (>=1.1.3-1.el8)
 
-- Create directory `processed_data` and extract processed data into directory as as described below.
-
-- Download processed data from the follow repositories 
+- Create directory `processed_data` and extract supplemental data from the follow repositories into that directory 
 	1. human scATAC-seq data available here: `GSE232002`
 	2. mouse  10x Multiome data available here: `GSE232001`
 	3. mouse ChIP-seq data avaiable here: `GSE232000`
 	4. human and mouse ATAC-seq data avaiable here: `GSE231999`
 
-- Generate .bam and .bai files from Gury-BenAri et al. H3K4me3 ChIP-seq data (additional details in methods section)
+- Generate .bam and .bai files from Gury-BenAri et al. H3K4me3 ChIP-seq data (additional details in methods section of manuscript)
 	1. Download H3K4me3 fastq files for ILC1, ILC2, and ILC3 cells (GSE85156)
 	2. Merge fastq file to create one fastq for each replicate
 	3. Trim reads cutadapt (v1.12)
@@ -49,7 +47,7 @@
 		2. ILC2 samples: blfILC2_GBA_H3K4me3_rep
 		3. ILC3 samples: blfILC3_GBA_H3K4me3_rep
 
-- Generate .bam and .bai files for human and mouse ATAC-seq data (additional details in methods section)
+- Generate .bam and .bai files for human and mouse ATAC-seq data (additional details in methods section of manuscript)
 	1. Download fastq files for mouse and human samples `GSE231999`
 	2. Trim reads cutadapt (v1.12)
 	3. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
@@ -66,7 +64,7 @@
 
 - Run work flows described below
 
-- Alternatively, download processed data including bam files here [PROVIDE LINK to Zenodo repository] and extract into directory `processed_data`
+- Alternatively, download processed data including .bam  and .bai files here [PROVIDE LINK to Zenodo repository] and extract into directory `processed_data`
 	1. Build Apptainer image file from definition file `gvhd_R4.3.1.def`
 	2. Run the bash file `sh generateFigures.sh`
 
