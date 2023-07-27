@@ -49,7 +49,7 @@ gata3_motif_file = "./Figure_4/hILC2-specific_peak_motifs/knownResults/known22.m
 # In[ ]:
 
 
-get_ipython().run_cell_magic('bash', '-s "$out_dir" "$hILC2_peakFile" "$gata3_motif_file"', '\n#HOMER version: v4.10.3\nmodule load homer;\n\nannotatePeaks.pl \\\n$2 \\\nhg38 \\\n-m $3 > $1hILC2-specific_peak_motifs/knownResults/ATAC_peaks_GATA3_motif.txt\n')
+get_ipython().run_cell_magic('bash', '-s "$out_dir" "$hILC2_peakFile" "$gata3_motif_file"', '\nannotatePeaks.pl \\\n$2 \\\nhg38 \\\n-m $3 > $1hILC2-specific_peak_motifs/knownResults/ATAC_peaks_GATA3_motif.txt\n')
 
 
 # In[ ]:
@@ -170,7 +170,7 @@ Tbet_motif_file = "./Figure_4/pc_hILC2-specific_peak_motifs/homerResults/motif5.
 # In[ ]:
 
 
-get_ipython().run_cell_magic('bash', '-s "$out_dir" "$pc_hILC2_peakFile" "$Tbet_motif_file"', '\n#HOMER version: v4.10.3\nmodule load homer;\n\n\nannotatePeaks.pl \\\n$2 \\\nhg38 \\\n-m $3 > $1pc_hILC2-specific_peak_motifs/homerResults/ATAC_peaks_Tbet_motif.txt\\\n')
+get_ipython().run_cell_magic('bash', '-s "$out_dir" "$pc_hILC2_peakFile" "$Tbet_motif_file"', '\nannotatePeaks.pl \\\n$2 \\\nhg38 \\\n-m $3 > $1pc_hILC2-specific_peak_motifs/homerResults/ATAC_peaks_Tbet_motif.txt\\\n')
 
 
 # In[ ]:
