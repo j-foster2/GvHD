@@ -20,7 +20,7 @@ library(JASPAR2020)
 library(TFBSTools)
 library(motifmatchr)
 library(BSgenome.Mmusculus.UCSC.mm10)
-
+library(BiocParallel)
 
 # Output Directory -------------------------------------------------------------
 out.dir <- "./Figure_2/"
@@ -152,6 +152,7 @@ post_transplant <- SetAssayData(post_transplant,
                                 slot = 'motifs',
                                 new.data = motif.object)
 
+register(MulticoreParam(20))
 post_transplant <- RunChromVAR(
   object = post_transplant,
   genome = BSgenome.Mmusculus.UCSC.mm10
