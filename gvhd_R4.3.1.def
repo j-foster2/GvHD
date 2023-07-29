@@ -149,4 +149,4 @@ From: r-base:4.3.1
         mkdir -p /opt/homer && cd /opt/homer
         wget http://homer.ucsd.edu/homer/configureHomer.pl
         perl /opt/homer/configureHomer.pl -install
-
+	perl /opt/homer/configureHomer.pl -install hg38
