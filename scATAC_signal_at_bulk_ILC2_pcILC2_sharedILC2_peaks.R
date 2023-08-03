@@ -70,7 +70,7 @@ pcILC2_combined_peakSet <- pcILC2_combined_peakSet[peakwidths  < 10000 & peakwid
 
 # Read Random Signature peaks --------------------------------------------------
 
-unchanged.sig.bed <- read.table(file = paste0(out.dir, "huILC2_huexILC2_unchanged_sig.bed"),
+unchanged.sig.bed <- read.table(file = paste0(out.dir, "hILC2_pc-hILC2_unchanged_ATAC_peaks.bed"),
                                 sep = '\t',
                                 header = F)
 
