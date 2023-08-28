@@ -79,7 +79,7 @@ set.seed(19)
 
 unchanged.sig.bed <- sample_n(unchanged.sig.bed, dim(ILC2.sig.bed)[1])
 
-colnames(unchanged.sig.bed) <- c("chr","start","end","strand")
+colnames(unchanged.sig.bed) <- c("chr","start","end")
 
 unchanged_combined_peakSet <- makeGRangesFromDataFrame(unchanged.sig.bed)
 
