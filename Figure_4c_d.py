@@ -43,7 +43,7 @@ background_peakFile = f'{out_dir}hILC2_pc-hILC2_unchanged_ATAC_peaks.bed'
 
 
 # GATA3 motif file 
-gata3_motif_file = "./Figure_4/hILC2-specific_peak_motifs/knownResults/known22.motif"
+gata3_motif_file = "./Figure_4/hILC2-specific_peak_motifs/knownResults/known23.motif"
 
 
 # In[ ]:
