@@ -156,15 +156,17 @@ ilc.integrated = RunUMAP(ilc.integrated, reduction = "pca", dims = 1:30)
 
 ilc.integrated = FindNeighbors(ilc.integrated, reduction = "pca", dims = 1:30)
 
-ilc.integrated = FindClusters(ilc.integrated)
+ilc.integrated = FindClusters(ilc.integrated, resolution = 0.8)
+
+DimPlot(ilc.integrated)
 
 
 # RNA analysis -----------------------------------------------------------------
 
 DefaultAssay(ilc.integrated) <- "RNA"
 
-ilc.integrated <- SCTransform(ilc.integrated, verbose = FALSE) %>% 
-  RunPCA() %>% 
+ilc.integrated <- SCTransform(ilc.integrated, verbose = FALSE) %>%
+  RunPCA() %>%
   RunUMAP(dims = 1:50,
           reduction.name = 'umap.rna',
           reduction.key = 'rnaUMAP_')

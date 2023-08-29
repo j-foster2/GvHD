@@ -15,6 +15,8 @@ out.dir <- "./Figure_3/"
 # Read Replicate 1 Data - Seurat Object ----------------------------------------
 ilc.integrated <- readRDS(file = "./Figure_3/inVitro_ILC2_pcILC2_integrated_rep1.rds")
 
+DimPlot(ilc.integrated, reduction = "umap")
+
 # Add gene activity ------------------------------------------------------------
 
 # quantify gene activity
