@@ -47,10 +47,10 @@ num.motifs.at.gained <- list()
 num.putative.regulators <- list()
 
 #
-cluster.labels <- c("Pre2", "Pre1", "Pre3",
+cluster.labels <- c("Pre2", "Pre3", "Pre1",
                     "Post1", "Post2", "Post3")
 
-colors <- c("#005BA3", "#A77F48", "#63C7C5",
+colors <- c("#63C7C5", "#A77F48", "#005BA3",
             "#238755", "#88B571", "#57813D")
 
 
