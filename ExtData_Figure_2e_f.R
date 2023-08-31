@@ -29,10 +29,10 @@ ilc.integrated.umap <- DimPlot(ilc.integrated,
                                label = FALSE,
                                label.size = 2.5,
                                repel = TRUE,
-                               cols = c("#88B570",
-                                        "#238654",
-                                        "#005aa2",
-                                        "#8772ce")) + 
+                               cols = c("#005aa2",
+                                        "#8772ce",
+                                        "#88B570",
+                                        "#238654")) + 
   aes(stroke = 0.25) +
   ggtitle("") +
   ylab("UMAP 2")+
