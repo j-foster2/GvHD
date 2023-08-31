@@ -51,7 +51,7 @@ ilc.integrated.umap <- DimPlot(ilc.integrated,
                                label = FALSE,
                                label.size = 2.5,
                                repel = TRUE,
-                               cols = c("#2C5D73", "#7cd37b")) + 
+                               cols = c("#7cd37b", "#2C5D73")) + 
   aes(stroke = 0.25) +
   ggtitle("") + 
   theme(legend.position = c(0.65, 0.90))
