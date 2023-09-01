@@ -66,7 +66,8 @@
 
 - Run work flows described below
 
-- Alternatively, download processed data including .bam  and .bai files here [PROVIDE LINK to Zenodo repository] and extract into directory `processed_data`
+## Generate Figures from intermediate files
+- Download processed data including .bam  and .bai files here [PROVIDE LINK to Zenodo repository] and extract into directory `processed_data`
 	1. Build Apptainer image file from definition file `gvhd_R4.3.1.def`
 	2. Run the bash file `sh generateFigures.sh`
 
