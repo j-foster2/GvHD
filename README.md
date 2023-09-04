@@ -1,4 +1,4 @@
-# Multiomic Single Cell Evaluation Reveals Inflammatory Cytokines Affect Innate Lymphoid Cell Fate After Allogeneic Stem Cell Transplantation
+# Multiomic Evaluation Reveals ILC2 Cell Plasticity After Allogeneic Stem Cell Transplantation
 
 ## Directories 
 
