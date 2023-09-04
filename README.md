@@ -2,7 +2,7 @@
 
 ## Directories 
 
-(Code needs to be exected as described below for all directories to appear)
+(Code needs to be executed as described below for all directories to appear)
 
 - `processed_data`: data run through data-appropriate pipeline (i.e. CellRanger)
 - `Bruce_Processed_Data`: processed data from Bruce et al. (PMID: 28375154)
