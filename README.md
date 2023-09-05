@@ -45,7 +45,7 @@
 	3. Trim reads cutadapt (v1.12)
 	4. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
 	5. Align to mm10 with STAR (v2.5.2b) (options: --outFilterScoreMin 1, --outFilterMultimapNmax 1 --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterType BySJout, --chimSegmentMin 1)
-	6. File name prefix convention (follow to help in execution of figure generation workflows):
+	6. File name prefix convention (scripts use these naming conventions, also include consecutive  numbers for each replicate):
 		1. ILC1 samples: blfILC1_GBA_H3K4me3_rep
 		2. ILC2 samples: blfILC2_GBA_H3K4me3_rep
 		3. ILC3 samples: blfILC3_GBA_H3K4me3_rep
@@ -56,7 +56,7 @@
 	3. Quality filter FASTX-ToolKit (v0.0.12) (options: Q 33, -p 90, and q 20)
 	4. PCR duplicates limited to 5
 	5. Align to mm10 with STAR (v2.5.2b) (options: –chimSegmentMin 15, --outFilterMismatchNmax 2, --chimJunctionOverhangMin 15, --outSAMtype BAM Unsorted, --outFilterScoreMin 1, --outFilterType    BySJout    and    --outFilterMultimapNmax 1)
-	6. Filename prefix convention (follow to help in execution of figure generation workflows):
+	6. Filename prefix convention (scripts use these naming conventions, also include consecutive  numbers for each replicate):
 		1. mouse ILC1 samples: mILC1_ATAC_rep
 			*Note: label ILC1 = pcILC2 in figures
 		2. mouse ILC2 samples: mILC2_ATAC_rep
@@ -67,10 +67,6 @@
 
 - Run work flows described below
 
-## Generate Figures from intermediate files
-- Download processed data including .bam  and .bai files here [PROVIDE LINK to Zenodo repository] and extract into directory `processed_data`
-	1. Build Apptainer image file from definition file `gvhd_R4.3.1.def`
-	2. Run the bash file `sh generateFigures.sh`
 
 ## Figure 1 workflow
 
