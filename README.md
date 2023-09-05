@@ -9,6 +9,7 @@
 - `GBA_Processed_Data`: MARS-seq processed data from Gury-BenAri et al. (PMID: 27545347)
 - `referenceData`: mm10 gene coordinates and genes associated with mouse ILC1 and ILC2 cells
 - `enrichrData`: output from Enrichr analyses 
+- `bulk_ATAC_Scripts`: custom scripts for processing bulk ATAC data (filtering duplicate reads) 
 - `jupyterNotebooks`: Store notebook versions of scripts used to processed data and generate figures
 - `Figure_1`: output from scripts for figure 1
 - `Figure_2`: output from scripts for figure 2
