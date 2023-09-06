@@ -282,6 +282,14 @@ for (i in 1:length(clusters.names)) {
   
 }
 
+# Save number of candidate regulators identified ------------------------------- 
+write("Number of Candidate Regulators:",
+      file= paste0(out.dir, "Fig2i_m_numberCandidateRegulators.txt"))
+
+write(capture.output(sum(unlist(num.putative.regulators))),
+      file= paste0(out.dir, "Fig2i_m_numberCandidateRegulators.txt"),
+      append=TRUE)
+
 
 # Save Session Info ------------------------------------------------------------
 
