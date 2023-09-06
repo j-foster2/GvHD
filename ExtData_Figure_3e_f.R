@@ -74,6 +74,17 @@ ggsave(ILC2.pcILC2.RNA.ma.plot,
        device = "pdf")
 
 
+## Save number of differential genes -------------------------------------------
+num.diff.genes <- ma.data %>% dplyr::filter(sig.color == "#1F9FE1") %>% nrow()
+
+write("Number of Differential genes:",
+      file= paste0(out.dir, "ExtData_Figure_3e_numberDifferentialGenes.txt"))
+
+write(capture.output(num.diff.genes),
+      file= paste0(out.dir, "ExtData_Figure_3e_numberDifferentialGenes.txt"),
+      append=TRUE)
+
+
 # Volcano Plot of differential Motif -------------------------------------------
 
 # Select ex.ILC2 data to plot
