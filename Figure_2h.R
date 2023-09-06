@@ -86,6 +86,31 @@ for (post.clust in post.transplant.clusters) {
 
 } 
 
+
+## Save number of differential ATAC --------------------------------------------
+write("Total Number of Differential regions:",
+      file= paste0(out.dir, "Fig2h_numberDifferentialATACRegions.txt"))
+
+write(capture.output(sum(lengths(diff_gene_list))),
+      file= paste0(out.dir, "Fig2h_numberDifferentialATACRegions.txt"),
+      append=TRUE)
+
+write("Number Pre-transplant associated ATAC regions:",
+      file= paste0(out.dir, "Fig2h_numberDifferentialATACRegions.txt"),
+      append=TRUE)
+
+write(capture.output(sum(lengths(diff_gene_list[1:3]))),
+      file= paste0(out.dir, "Fig2h_numberDifferentialATACRegions.txt"),
+      append=TRUE)
+
+write("Number Post-transplant associated ATAC regions:",
+      file= paste0(out.dir, "Fig2h_numberDifferentialATACRegions.txt"),
+      append=TRUE)
+
+write(capture.output(sum(lengths(diff_gene_list[4:6]))),
+      file= paste0(out.dir, "Fig2h_numberDifferentialATACRegions.txt"),
+      append=TRUE)
+
 ## Generate Union Set of differential genes ------------------------------------
 
 # Clusters to cycle through
