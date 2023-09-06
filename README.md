@@ -24,7 +24,7 @@
 	4. human and mouse ATAC-seq data avaiable here: `GSE231999`
 
 
-## Generate Figures (Runs Workflows described below)
+## Generating Figures
 - System Requirements:
 	1. memory >= 100g
 	2. minimum of 24 cpus for scripts that require parallel processing
