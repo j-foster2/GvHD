@@ -25,8 +25,6 @@ library(clustree)
 library(BiocParallel)
 
 
-setwd("/proj/dllab/jfoster/serody_project/GitHub/GvHD/")
-
 # Output Directory -------------------------------------------------------------
 
 out.dir <- "./Figure_2/"
@@ -174,7 +172,6 @@ ilc.integrated = IntegrateData(anchorset = immune.anchors)
 # Run Seurat workflow for Integrated data
 DefaultAssay(ilc.integrated) <- "integrated"
 
-# TODO scale data - describe mroe
 ilc.integrated = ScaleData(ilc.integrated, verbose = FALSE)
 
 # Dimension reduction with PCA
@@ -208,6 +205,7 @@ ilc.integrated@misc <- append(ilc.integrated@misc, list(ilc.clusttree))
 names(ilc.integrated@misc) <- c("clusterOptimizationPlot")
 
 
+
 # Drop two cells that cluster on their own at multiple resolution values -------
 
 cells.to.remove <- c(row.names(ilc.integrated@meta.data %>%
@@ -215,6 +213,8 @@ cells.to.remove <- c(row.names(ilc.integrated@meta.data %>%
 
 ilc.integrated <- ilc.integrated[,!colnames(ilc.integrated) %in% cells.to.remove]
 
+# Save cell IDs for cells in 7th cluster
+cells.to.remove
 
 # RNA analysis (Seurat workflow) -----------------------------------------------
 
