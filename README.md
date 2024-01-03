@@ -1,5 +1,3 @@
-# Multiomic Evaluation Reveals ILC2 Cell Plasticity After Allogeneic Stem Cell Transplantation
-
 ## Directories 
 
 (Code needs to be executed as described below for all directories to appear)
